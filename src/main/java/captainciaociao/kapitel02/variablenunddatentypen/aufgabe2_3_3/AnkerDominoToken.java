@@ -21,7 +21,7 @@ public class AnkerDominoToken {
     public boolean matches(AnkerDominoToken token) {
         for (int i = 0; i < this.fields.length; i++) {
             for (int j = 0; j < this.fields.length; j++) {
-                if (this.fields[i].equals(token.fields[j])) {
+                if (this.fields[i].getValue().equals(token.fields[j].getValue())) {
                     return true;
                 }
 

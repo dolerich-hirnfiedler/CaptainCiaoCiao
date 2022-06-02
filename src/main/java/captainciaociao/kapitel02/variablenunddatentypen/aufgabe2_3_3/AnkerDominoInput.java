@@ -42,7 +42,8 @@ public class AnkerDominoInput {
         do {
             System.out.printf("Pleas enter the Value of the Field: ");
             input = SCANNER.next();
-        } while (isbetweenZeroAndNine(input));
+        } while (!isbetweenZeroAndNine(input));
+
         return input;
     }
 
