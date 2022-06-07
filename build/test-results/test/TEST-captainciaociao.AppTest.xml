@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="captainciaociao.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-02T12:48:47" hostname="MacBook-Air-von-Jakob.local" time="0.001">
+<testsuite name="captainciaociao.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-06T11:35:32" hostname="jakob-ms7c52" time="0.003">
   <properties/>
-  <testcase name="shouldAnswerWithTrue" classname="captainciaociao.AppTest" time="0.001"/>
+  <testcase name="shouldAnswerWithTrue" classname="captainciaociao.AppTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
