@@ -11,5 +11,6 @@ public class RumBottles {
             System.out.printf(" %d bottle of rum%n", amountOfBottles);
         else
             System.out.printf(" %d bottles of rum%n", amountOfBottles);
+        scanner.close();
     }
 }

@@ -10,8 +10,9 @@ public class CoinMachineInput {
         while (true) {
             System.out.printf("Please enter new Amount of Money: ");
             input = SCANNER.next();
-            if (input.matches("[0-9]+,[0-9]+")) {
-                return (int) Float.parseFloat(input) * 100;
+            if (input.matches("([0-9]+)(.|,)([0-9]+)")) {
+                input=input.replace(",",".");
+                return (int) (Float.parseFloat(input) * 100);
             }
             System.out.printf("Invalid input please try again ");
         }
