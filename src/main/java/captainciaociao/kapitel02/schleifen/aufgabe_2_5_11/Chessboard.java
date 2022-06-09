@@ -21,16 +21,8 @@ public class Chessboard {
         return width;
     }
 
-    private void setWidth(int width) {
-        this.width = width;
-    }
-
     public int getHeight() {
         return height;
-    }
-
-    private void setHeight(int height) {
-        this.height = height;
     }
 
     public void printToConsole() {
