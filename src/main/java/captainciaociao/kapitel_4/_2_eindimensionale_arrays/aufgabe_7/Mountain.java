@@ -28,10 +28,23 @@ public class Mountain {
         int[][] raster = new int[getHight() + 1][];
         for (int i = 0; i < raster.length; i++) {
             raster[i] = new int[this.altitudes.length];
+            for (int j = 0; j < raster[i].length; j++) {
+                raster[i][j] = -1;
+
+            }
         }
         for (int i = 0; i < this.altitudes.length; i++) {
-            raster[raster.length - this.altitudes[i]][i] = this.altitudes[i];
+            raster[raster.length-1 - this.altitudes[i]][i] = this.altitudes[i];
         }
-
+        for (int i = 0; i < raster.length; i++) {
+            for (int j = 0; j < raster[i].length; j++) {
+                if (raster[i][j] != -1) {
+                    System.out.printf("*");
+                }else{
+                    System.out.printf(" ");
+                }
+            }
+            System.out.printf("%n");
+        }
     }
 }

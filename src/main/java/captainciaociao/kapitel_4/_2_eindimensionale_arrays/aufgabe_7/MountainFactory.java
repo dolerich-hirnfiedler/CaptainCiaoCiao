@@ -6,7 +6,7 @@ public class MountainFactory {
     private static final Random RANDOM = new Random();
 
     private static int[] generateAltitude(int height) {
-        int[] constructionInformation = new int[2 * height - 1];
+        int[] constructionInformation = new int[2 * height + 1];
         int size = 0;
         int j = 0;
         int index = 0;
@@ -22,7 +22,7 @@ public class MountainFactory {
                 if (i <= height) {
                     altitude[index] = i;
                 } else {
-                    altitude[index] = constructionInformation.length - i;
+                    altitude[index] = constructionInformation.length-1 - i;
                 }
                 index++;
             }
