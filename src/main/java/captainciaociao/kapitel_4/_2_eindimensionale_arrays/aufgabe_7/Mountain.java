@@ -47,39 +47,35 @@ public class Mountain {
     }
   }
 
+  // TODO finish the top
   public void print2() {
-    int[][] raster = new int[getHight() + 1][];
+    String[][] raster = new String[getHight() + 1][];
     for (int i = 0; i < raster.length; i++) {
-      raster[i] = new int[this.altitudes.length];
+      raster[i] = new String[this.altitudes.length];
       for (int j = 0; j < raster[i].length; j++) {
-        raster[i][j] = -1;
+        raster[i][j] = " ";
       }
     }
     for (int i = 0; i < this.altitudes.length; i++) {
-      raster[raster.length - 1 - this.altitudes[i]][i] = this.altitudes[i];
+      if (i < (this.altitudes.length - 1) / 2) {
+        if (altitudes[i] == altitudes[i + 1]) {
+          raster[raster.length - 1 - this.altitudes[i]][i] = "-";
+        } else {
+          raster[raster.length - 1 - this.altitudes[i]][i] = "/";
+        }
+      } else {
+        if (altitudes[i] == altitudes[i - 1]) {
+          raster[raster.length - 1 - this.altitudes[i]][i] = "-";
+        } else {
+          raster[raster.length - 1 - this.altitudes[i]][i] = "\\";
+        }
+      }
     }
     for (int i = 0; i < raster.length; i++) {
       for (int j = 0; j < raster[i].length; j++) {
-        if(raster[i][j]!=-1){
-        if (i > 0 && j > 0 && i < raster.length-1 && j < raster[i].length-1) {
-          if (raster[i][j + 1] != -1) {
-            System.out.printf("-");
-          } else if (raster[i + 1][j + 1] != -1) {
-            System.out.printf("/");
-          } else if (raster[i][j - 1] != -1) {
-            System.out.printf("-");
-          } else if (raster[i - 1][j - 1] != -1) {
-            System.out.printf("\\");
-          } else if (raster[i - 1][j - 1] != -1 && raster[i + 1][j - 1] != -1) {
-            System.out.printf("^");
-          }
-        }
-      }else{
-          System.out.printf(" ");
-        }
+        System.out.printf("%s", raster[i][j]);
       }
       System.out.printf("%n");
     }
-
   }
 }
