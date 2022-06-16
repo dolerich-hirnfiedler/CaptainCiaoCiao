@@ -1,15 +1,19 @@
 package captainciaociao.kapitel_4._2_eindimensionale_arrays.aufgabe_7;
 
-import javax.swing.*;
-
 public class Mountain {
   private int[] altitudes;
 
-  public Mountain(int[] altitudes) { this.altitudes = altitudes; }
+  public Mountain(int[] altitudes) {
+    this.altitudes = altitudes;
+  }
 
-  public int[] getAltitudes() { return altitudes; }
+  public int[] getAltitudes() {
+    return altitudes;
+  }
 
-  public void setAltitudes(int[] altitudes) { this.altitudes = altitudes; }
+  public void setAltitudes(int[] altitudes) {
+    this.altitudes = altitudes;
+  }
 
   private int getHight() {
     int height = 0;
@@ -41,5 +45,41 @@ public class Mountain {
       }
       System.out.printf("%n");
     }
+  }
+
+  public void print2() {
+    int[][] raster = new int[getHight() + 1][];
+    for (int i = 0; i < raster.length; i++) {
+      raster[i] = new int[this.altitudes.length];
+      for (int j = 0; j < raster[i].length; j++) {
+        raster[i][j] = -1;
+      }
+    }
+    for (int i = 0; i < this.altitudes.length; i++) {
+      raster[raster.length - 1 - this.altitudes[i]][i] = this.altitudes[i];
+    }
+    for (int i = 0; i < raster.length; i++) {
+      for (int j = 0; j < raster[i].length; j++) {
+        if(raster[i][j]!=-1){
+        if (i > 0 && j > 0 && i < raster.length-1 && j < raster[i].length-1) {
+          if (raster[i][j + 1] != -1) {
+            System.out.printf("-");
+          } else if (raster[i + 1][j + 1] != -1) {
+            System.out.printf("/");
+          } else if (raster[i][j - 1] != -1) {
+            System.out.printf("-");
+          } else if (raster[i - 1][j - 1] != -1) {
+            System.out.printf("\\");
+          } else if (raster[i - 1][j - 1] != -1 && raster[i + 1][j - 1] != -1) {
+            System.out.printf("^");
+          }
+        }
+      }else{
+          System.out.printf(" ");
+        }
+      }
+      System.out.printf("%n");
+    }
+
   }
 }

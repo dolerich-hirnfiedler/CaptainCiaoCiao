@@ -4,5 +4,6 @@ public class MountainMain {
   public static void main(String[] args) {
     Mountain mountain = MountainFactory.initMountain(5);
     mountain.print();
+    mountain.print2();
   }
 }
