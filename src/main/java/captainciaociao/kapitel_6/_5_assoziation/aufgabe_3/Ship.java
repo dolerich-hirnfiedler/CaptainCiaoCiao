@@ -50,6 +50,13 @@ public class Ship {
         return numberOfDevicesSwitchedOn;
     }
 
+    public void holiday() {
+        for (ElectronicDevice device : this.electronicDevices) {
+            device.off();
+        }
+
+    }
+
     @Override
     public String toString() {
         return "Ship [devices=" + electronicDevices + "]";
