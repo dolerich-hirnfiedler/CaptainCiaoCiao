@@ -1,9 +1,12 @@
 package captainciaociao.kapitel_6._5_assoziation.aufgabe_3;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import captainciaociao.kapitel_6._1_objekte_und_klassen.aufgabe_1.Radio;
 import captainciaociao.kapitel_6._6_vererbung.aufgabe_1.ElectronicDevice;
+import captainciaociao.kapitel_6._9_schnittstellen.aufgabe_1.ElectronicDeviceWattComparator;
 
 public class Ship {
     private ArrayList<ElectronicDevice> electronicDevices = new ArrayList<ElectronicDevice>();
@@ -37,6 +40,7 @@ public class Ship {
             }
             this.addElectronicDevice(device);
         }
+        this.electronicDevices.sort(null);
 
     }
 
@@ -60,6 +64,11 @@ public class Ship {
     @Override
     public String toString() {
         return "Ship [devices=" + electronicDevices + "]";
+    }
+
+    public ElectronicDevice findMostPowerConsumingElectronicDevice() {
+        Comparator<ElectronicDevice> c = new ElectronicDeviceWattComparator();
+        return Collections.max(this.getRadios(), c);
     }
 
 }

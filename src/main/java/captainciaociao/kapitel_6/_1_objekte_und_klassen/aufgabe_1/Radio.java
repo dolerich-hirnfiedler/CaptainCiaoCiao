@@ -64,7 +64,8 @@ public class Radio extends ElectronicDevice {
 
   @Override
   public String toString() {
-    return "Radio [Volume=" + Volume + ", frequency=" + frequency + ", maxFrequency=" + maxFrequency + ", minFrequency="
+    return super.toString() + "Radio [Volume=" + Volume + ", frequency=" + frequency + ", maxFrequency=" + maxFrequency
+        + ", minFrequency="
         + minFrequency + ", modulation=" + modulation + "]";
   }
 
