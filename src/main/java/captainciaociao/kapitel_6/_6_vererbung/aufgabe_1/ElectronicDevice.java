@@ -1,5 +1,7 @@
 package captainciaociao.kapitel_6._6_vererbung.aufgabe_1;
 
+import captainciaociao.kapitel_8._3_eigene_ausnahmeklassen_schreiben.aufgabe_1.IllegalWattException;
+
 public class ElectronicDevice {
     private boolean isOn;
     private int watt;
@@ -13,7 +15,7 @@ public class ElectronicDevice {
         return watt;
     }
 
-    public void setWatt(int watt) {
+    public void setWatt(int watt) throws IllegalWattException {
         this.watt = watt;
     }
 
