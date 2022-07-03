@@ -37,12 +37,6 @@ publishing {
         }
     }
 }
-task runAufgabe232(type: JavaExec){
-    standardInput=System.in
-    description = "Run Aufgabe 2.3.2  with JavaExecTask"
-    classpath = sourceSets.main.runtimeClasspath
-    main = "captainciaociao.kapitel02.variablenunddatentypen.aufgabe2_3_2.Main"
-}
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
