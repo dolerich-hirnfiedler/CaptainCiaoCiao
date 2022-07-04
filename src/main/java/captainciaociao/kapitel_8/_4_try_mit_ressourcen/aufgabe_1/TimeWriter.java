@@ -7,7 +7,8 @@ import java.time.LocalDateTime;
 
 public class TimeWriter {
   public static void main(String[] args) {
-    File writeFile = new File("output.txt");
+    File writeFile = new File(
+        "src/main/java/captainciaociao/kapitel_8/_4_try_mit_ressourcen/aufgabe_1/output.txt");
     try (PrintWriter fileWriter = new PrintWriter(writeFile)) {
       fileWriter.write(LocalDateTime.now().toString());
     } catch (FileNotFoundException e) {
