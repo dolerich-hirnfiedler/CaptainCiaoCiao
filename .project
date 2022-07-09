@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>CaptainCiaoCiao</name>
-	<comment></comment>
+	<comment>CaptainCiaoCiao</comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -28,7 +28,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1654093954795</id>
+			<id>1</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
