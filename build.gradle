@@ -38,6 +38,20 @@ publishing {
         }
     }
 }
+
+task runWithJavaExec(type: JavaExec) {
+    group = "Execution"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = "captainciaociao.kapitel_2._6_methoden.aufgabe_1.LinePrinterDemo"
+}
+
+task runFail(type: JavaExec) {
+    group = "Execution"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = "captainciaociao.kapitel_2._6_methoden.aufgabe_1.LineprinterDemo"
+}
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
