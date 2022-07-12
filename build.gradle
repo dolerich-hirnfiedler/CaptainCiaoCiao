@@ -46,6 +46,12 @@ task runWithJavaExec(type: JavaExec) {
     main = "captainciaociao.kapitel_2._6_methoden.aufgabe_1.LinePrinterDemo"
 }
 
+task runChristmastreeMain(type: JavaExec) {
+    group = "Execution"
+    description = "Run the main class with JavaExecTask"
+    classpath = sourceSets.main.runtimeClasspath
+    main = "captainciaociao.kapitel_2.schleifen.aufgabe_2_5_12.ChristmastreeMain"
+}
 task runFail(type: JavaExec) {
     group = "Execution"
     description = "Run the main class with JavaExecTask"
