@@ -6,15 +6,10 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class SchnittstellenAufgabe {
-    /**
-     * interface Runnable { void run(); }
-     *
-     */
     Runnable runnable = () -> System.out.printf("%n");
     ActionListener listener = e -> System.out.printf("%n");
     Supplier<String> supplier = () -> "";
-    Consumer<Point> consumer = point -> {
-    };
+    Consumer<Point> consumer = point -> System.out.printf("%n");;
     Comparator<Rectangle> comparator = (o1, o2) -> 2;
 
 }
