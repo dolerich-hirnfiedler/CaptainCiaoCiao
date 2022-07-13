@@ -18,5 +18,18 @@ class Schmegeggy {
 
     public static void main(String[] args) {
         printDistance(new ManhattanDistance(), 12, 33);
+
+        // funktionale alternativen
+        System.out.printf("Variante 1: %n");
+        printDistance((a, b) -> a + b, 12, 33);
+
+        System.out.printf("Variante 2: %n");
+        printDistance((a, b) -> {
+            return a + b;
+        }, 12, 33);
+
+        System.out.printf("Variante 3: %n");
+        printDistance((int a, int b) -> a + b, 12, 33);
     }
+
 }
