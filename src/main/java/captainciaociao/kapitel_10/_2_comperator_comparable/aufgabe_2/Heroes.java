@@ -1,7 +1,9 @@
 package captainciaociao.kapitel_10._2_comperator_comparable.aufgabe_2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -51,4 +53,18 @@ public class Heroes {
 
     public static final List<Hero> ALL = Collections
             .unmodifiableList(Stream.concat(DC.stream(), MARVEL.stream()).collect(Collectors.toList()));
+
+    public static final List<Universe> UNIVERSES = Collections
+            .unmodifiableList(Arrays.asList(new Universe("DC", DC), new Universe("Marvel", MARVEL)));
+
+    List<Hero> allHeroes = new ArrayList<>(Heroes.ALL);
+
+    class yearFirstApperanceComparator implements Comparator<Heroes.Hero> {
+
+        @Override
+        public int compare(Hero o1, Hero o2) {
+            return Integer.compare(o1.yearFirstApperance, o2.yearFirstApperance);
+        }
+
+    }
 }
