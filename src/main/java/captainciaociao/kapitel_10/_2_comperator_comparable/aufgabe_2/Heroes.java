@@ -35,6 +35,24 @@ public class Heroes {
 
     }
 
+    public static class Universe {
+        private final String name;
+        private final List<Hero> heroes;
+
+        public Universe(String name, List<Hero> heroes) {
+            this.name = Objects.requireNonNull(name);
+            this.heroes = Objects.requireNonNull(heroes);
+        }
+
+        public String name() {
+            return name;
+        }
+
+        public Stream<Hero> heroes() {
+            return heroes.stream();
+        }
+    }
+
     private static final Hero DEADPOOL = new Hero("Deadpool (Wade Wilson)", Hero.Sex.MALE, 1991);
     private static final Hero LANA_LANG = new Hero("Lana Lang", Hero.Sex.FEMALE, 1950);
     private static final Hero THOR = new Hero("Thor (Thor Odinson)", Hero.Sex.MALE, 1950);
