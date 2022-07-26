@@ -1,6 +1,6 @@
 package captainciaociao.kapitel_10._2_comperator_comparable.aufgabe_7;
 
-import java.awt.Point;
+import java.awt.*;
 
 public class Store {
     private Point location;

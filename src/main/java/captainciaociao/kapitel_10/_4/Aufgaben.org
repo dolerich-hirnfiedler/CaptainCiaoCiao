@@ -1,0 +1,14 @@
+#+title: Aufgaben
+* Aufzählung für Süßwaren
+1. Deklariere eine Aufzählung ~CandyType~ mit Konstanten für:
+   - Caramels
+   - Chocolate
+   - Gummies
+   - Licorice
+   - Lollipops
+   - Chewing Gums
+   - Cotton Candy
+2. Führe eine eigene Methode ein: ~static Optional<CandyType> fromName(String input)~.
+* Zufällige Süßwaren liefern
+1. Gib dem Aufzählungstyp ~CandyType~ eine Methode ~random()~, die eine Zufällige Süßware liefert.
+2. Verschiebe die ~fromName(String)~-Methode aus der letzten Aufgabe in den Aufzählungstyp hinein.
