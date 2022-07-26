@@ -80,9 +80,9 @@ public class Heroes {
     class yearFirstApperanceComparator implements Comparator<Heroes.Hero> {
 
         @Override
-        public int compare(Hero o1, Hero o2) {
+        public int compare(Heroes.Hero o1, Heroes.Hero o2) {
             return Integer.compare(o1.yearFirstApperance, o2.yearFirstApperance);
-        }
 
+        }
     }
 }
