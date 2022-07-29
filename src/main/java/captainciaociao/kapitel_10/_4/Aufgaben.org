@@ -12,3 +12,16 @@
 * Zufällige Süßwaren liefern
 1. Gib dem Aufzählungstyp ~CandyType~ eine Methode ~random()~, die eine Zufällige Süßware liefert.
 2. Verschiebe die ~fromName(String)~-Methode aus der letzten Aufgabe in den Aufzählungstyp hinein.
+* Süßwaren mit Suchtfaktor auszeichnen
+1. Verbinde jedes Aufzählungselement aus ~CandyType~ mit einem Suchtfaktor (~int~):
+   - Caramels: 9
+   - Chocolate: 5
+   - Gummies: 4
+   - Licorice: 3
+   - Lollipops: 2
+   - Chewing Gums: 3
+   - Cotton Candy: 1
+
+   Nutze einen Konstruktor im ~enum~ Den Suchtfaktor soll eine neue nicht-statische Methode ~addictiveQuality()~ liefern.
+
+2. Schreibe eine ~CandyType~-Methode ~next()~, welche die Süßigkeit mit dem nächst größten Suchtfaktor liefert.

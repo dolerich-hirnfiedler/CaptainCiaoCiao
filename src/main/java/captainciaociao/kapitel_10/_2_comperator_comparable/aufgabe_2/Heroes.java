@@ -59,7 +59,7 @@ public class Heroes {
     private static final Hero IRON_MAN = new Hero("Iron Man (Anthony 'Tony' Stark)", Hero.Sex.MALE, 1963);
     private static final Hero SPIDERMAN = new Hero("Spider-Man (Peter Parker)", Hero.Sex.MALE, 1962);
     private static final Hero WONDER_WOMAN = new Hero("Wonder Woman (Diana Prince)", Hero.Sex.FEMALE, 1941);
-    private static final Hero CAPTAIN_AMERICA = new Hero("Caaptain America (Steve Rogers)", Hero.Sex.MALE, 1941);
+    private static final Hero CAPTAIN_AMERICA = new Hero("Captain America (Steve Rogers)", Hero.Sex.MALE, 1941);
     private static final Hero SUPERMAN = new Hero("Superman (Clark Kent)", Hero.Sex.MALE, 1938);
     private static final Hero BATMAN = new Hero("Batman (Bruce Wayne)", Hero.Sex.MALE, 1939);
 
