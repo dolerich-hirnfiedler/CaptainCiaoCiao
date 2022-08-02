@@ -11,7 +11,11 @@ public enum CandyType {
   CHEWING_GUMS(3),
   COTTON_CANDY(1);
 
-  private CandyType() {}
+  private final int addictiveQuality;
+
+  private CandyType(int addictiveQuality) {
+    this.addictiveQuality = addictiveQuality;
+  }
 
   static Optional<CandyType> fromName(String input) {
     try {
@@ -21,6 +25,36 @@ public enum CandyType {
     } catch (IllegalArgumentException e) {
       return Optional.empty();
     }
+  }
+
+  // TODO reread chapter regarding enums !!!
+  public int getAddictiveQuality() { return addictiveQuality; }
+
+  public CandyType next() {
+    CandyType tempType = this;
+    // Second Idea
+    // for (int i = 1; i < values().length; i++) {
+    //   if (values()[i].getAddictiveQuality() > this.getAddictiveQuality()) {
+    //     if (values()[i].getAddictiveQuality() <
+    //         tempType.getAddictiveQuality()) {
+    //       tempType = values()[i];
+    //     }
+    //   }
+    //
+    //  First Idea
+    //  if (Math.abs(this.addictiveQuality() - values()[i].addictiveQuality())
+    //  >=
+    //          1 &&
+    //      Math.abs(this.addictiveQuality() - values()[i].addictiveQuality())
+    //      <=
+    //          Math.abs(this.addictiveQuality() -
+    //                   values()[i + 1].addictiveQuality())) {
+    //    returnType = values()[i];
+    //  } else {
+    //    returnType = values()[i + 1];
+    //  }
+    //}
+    return tempType;
   }
 
   public static CandyType random() {
@@ -46,6 +80,9 @@ public enum CandyType {
   }
 
   public static void main(String[] args) {
-    System.out.print(CandyType.random());
+    CandyType type = CandyType.random();
+    System.out.println(type);
+    System.out.println("Next higher");
+    System.out.println(type.next());
   }
 }
