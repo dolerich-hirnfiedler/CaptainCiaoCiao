@@ -43,20 +43,20 @@ task runWithJavaExec(type: JavaExec) {
     group = "Execution"
     description = "Run the main class with JavaExecTask"
     classpath = sourceSets.main.runtimeClasspath
-    main = "captainciaociao.kapitel_2._6_methoden.aufgabe_1.LinePrinterDemo"
+    main = "captainciaociao.kapitel_02._6_methoden.aufgabe_1.LinePrinterDemo"
 }
 
 task runChristmastreeMain(type: JavaExec) {
     group = "Execution"
     description = "Run the main class with JavaExecTask"
     classpath = sourceSets.main.runtimeClasspath
-    main = "captainciaociao.kapitel_2.schleifen.aufgabe_2_5_12.ChristmastreeMain"
+    main = "captainciaociao.kapitel_02.schleifen.aufgabe_2_5_12.ChristmastreeMain"
 }
 task runFail(type: JavaExec) {
     group = "Execution"
     description = "Run the main class with JavaExecTask"
     classpath = sourceSets.main.runtimeClasspath
-    main = "captainciaociao.kapitel_2._6_methoden.aufgabe_1.LineprinterDemo"
+    main = "captainciaociao.kapitel_02._6_methoden.aufgabe_1.LineprinterDemo"
 }
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
