@@ -25,3 +25,31 @@
    Nutze einen Konstruktor im ~enum~ Den Suchtfaktor soll eine neue nicht-statische Methode ~addictiveQuality()~ liefern.
 
 2. Schreibe eine ~CandyType~-Methode ~next()~, welche die Süßigkeit mit dem nächst größten Suchtfaktor liefert.
+* Schnittstellen-Implementierung über ein enum
+Gegeben ist eine Schnittstelle ~Distance~:
+#+begin_export java
+interface Distance{
+    double distance(double x1, double y1, double x2, double y2);
+    double distance(double x1, double y1, double z1, double x2, double y2, double z2);
+}
+#+end_export
+1. Übernimm die Schnittstelle Distance in das eigene Projekt.
+2. Deklariere einen Aufzählungstyp ~Distances~, der ~Distance~ implementiert mit genau einem Aufzählungstypen ~EUCLIDEAN~.
+   Wer nun eine ~Distance~-Implementierung für den euklidischen Abstand benötigt kann diese nun über ~Distances.EUCLIDEAN~ bekommen.
+* Aufzählungen vereinigen
+Im ersten Entwurf einer Software wurde ein Aufzählungstyp ~EssentialJob~ mit Berufen definiert:
+#+begin_export java
+enum EssentialJob{
+    CAPTAIN, QUARTERMASTER, SAILINGMASTER, BOATSWAIN, SURGEON, CARPENTER,MASTER_GUNNER
+}
+#+end_export
+
+Nun ist aufgefallen, dass Jobs fehlen. Allerdings kann in dem Projekt der Aufzählungstyp ~EssentialJob~ nicht mehr nachträglich ergänzt werden. Es wird ein neuer Aufzählungstyp deklariert:
+#+begin_export java
+enum NonEssentialJob{
+    MATE, ABLE_BODIED_SAILOR, CABIN_BOY
+}
+#+end_export
+
+In Java ist es nicht möglich, dass ein ~enum~ von einem anderen ~enum~ erbt.
+1. Schaffe über eine gemeinsame Schnittstelle für die Aufzählungstypen eine Möglichkeit, eine eigene ~apply(XXX job)~ Methode zu deklarieren, die Aufzählungen entweder von ~EssentialJob~ oder ~NonEssentialJob~ aufnehmen kann.
