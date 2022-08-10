@@ -15,12 +15,12 @@ public class PrintingTable {
         for (String[] row : this.table) {
             System.out.printf("%n");
             for (String value : row) {
-                System.out.printf("%s ", value);
+                System.out.printf("%-5s", value);
             }
         }
     }
 
     public void setValue(int row, int column, String value) {
-
+        this.table[row][column]=value;
     }
 }
