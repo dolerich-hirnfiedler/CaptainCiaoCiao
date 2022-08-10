@@ -35,3 +35,16 @@ Dec Hex    Dec Hex    Dec Hex  Dec Hex  Dec Hex  Dec Hex   Dec Hex   Dec Hex
 
 1. Schreibe ein Programm, dass alle ASCII-Zeichen von Position 32 bis 127 in der gleichen Formatierung ausgibt.
 2. An die Position 127 schreibe ~DEL~.
+* Ausgaben bündig untereinander setzen
+Captain Ciao Ciao benötigt eine Tabelle der folgenden Art:
+|-----------+----------|
+| Dory Dab  | paid     |
+| Bob Banjo | paid     |
+| Cod Buri  | paid     |
+| Bugsy     | not paid |
+|-----------+----------|
+
+1. Schreibe eine Methode ~printList(String[] names, boolean[] paid)~, die eine Aufstellung auf dem Bildschirm ausgibt. Im ersten String-Array stehen alle Namen, im zweiten Array Informationen, ob die Person bezahlt hat oder nicht.
+2. Alle Namen können unterschiedlich lang sein, dennoch sollen die Texte in der zweiten Spalte bündig untereinander stehen.
+3. Der längste String in der ersten Spalte hat einen Abstand von vier Leerzeichen zur zweiten Spalte.
+4. Sind die übergebenen Arrays ~null~ so soll eine ~NullPoiterException~ ausgegeben werden.
