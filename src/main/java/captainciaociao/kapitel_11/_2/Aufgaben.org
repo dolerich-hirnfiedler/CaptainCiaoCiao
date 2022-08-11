@@ -30,3 +30,9 @@ Bonny Brain bekommt eine eingescannte Liste mit Zahlen, die elektronisch weiterv
 
 1. Gegeben ist eine Zeile aus dem Scan mit Zahlen aus dem gezeigten Format. Wandele die Zahlen in eine Ganzzahl um.
 2. Nach der letzten Ziffer könnten die Leerzeichen fehlen, und zwischen den großen Zeichen könnten mehrere Leerzeichen stehen.
+* Leise Bitte! Schreiende Texte entschärfen
+Schreibe eine Methode ~String silentShoutingWords(String)~, die alle großgeschriebenen Wörter ab einer Länge von drei Buchstaben in Kleinbuchstaben konvertiert.
+#+begin_example
+silentShoutingWords("AY Captain! Smutje MUSS WEG!")
+-> "AY Captain! Smutje muss weg!"
+#+end_example
