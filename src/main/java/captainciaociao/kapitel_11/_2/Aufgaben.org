@@ -36,3 +36,16 @@ Schreibe eine Methode ~String silentShoutingWords(String)~, die alle großgeschr
 silentShoutingWords("AY Captain! Smutje MUSS WEG!")
 -> "AY Captain! Smutje muss weg!"
 #+end_example
+* Zahlen erkennen und in Wörter umwandeln
+Schreibe eine Methode, die alle Zahlen im Text erkennt und in Wörter umwandelt
+#+begin_example
+"99 bottles of beer make CaptainCiaoCiao happy for 10 years"
+->
+"ninety-nine bottles off beer make CaptainCiaoCiao happy for 10 years"
+#+end_example
+
+Ein nützlicher Link zum Umwandeln von Zahlen in Strings auf Englisch:
+https://stackoverflow.com/questions/3911966/how-to-convert-number-to-words-in-java
+
+- Tipp :: Die Typen ~Pattern~ und ~Matcher~ bieten weiter interessante Möglichkeiten.
+- Matcher :: ~appendReplacement()~ und ~appendTail()~.
