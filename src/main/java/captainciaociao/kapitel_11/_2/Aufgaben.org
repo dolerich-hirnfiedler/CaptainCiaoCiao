@@ -1,4 +1,16 @@
 #+title: Aufgaben
+
+* Verwendete Datentypen
+** ~java.util.Formatter~
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Formatter.html
+** ~java.lang.String~
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
+** ~java.util.regex.Pattern~
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/Pattern.html
+** ~java.util.regex.Matcher~
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/Matcher.html
+** ~java.util.Scanner~
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Scanner.html
 * Beliebtheit in sozialen Medien ermitteln
 Gegeben ist ein aggregierter Text mit Nachrichten; wie oft kommt dort ~#CaptainCiaoCiao~ bzw. ~@CaptainCiaoCiao~ vor?
 #+begin_example
@@ -9,11 +21,11 @@ What is a hacker's favorite pop song? The Black IP's.
 * Eingescannte Werte erkennen
 Bonny Brain bekommt eine eingescannte Liste mit Zahlen, die elektronisch weiterverarbeitet werden müssen. Im ersten Schritt schickt sie die Scans durch eine OCR-Erkennung, und am Ende steht ASCII-Text. Die Zahlen aus der OCR-Kennung sehen immer so aus:
 #+begin_example
- 000   11     22   333   4  4 55555    6     77777   888    9999
-0  00 111    2  2     3  4  4 5       6         7   8   8  9   9
-0 0 0  11      2    33   4444 555    6666      7     888    9999
-00  0  11     2       3     4    5   6   6     7    8   8     9
- 000   11    2222  333      4 555     666      7     888     9
+ 000   11   22  333  4  4 5555   6   77777  888   9999
+0  00 111  2  2    3 4  4 5     6       7  8   8 9   9
+0 0 0  11    2   33  4444 555  6666    7    888   9999
+00  0  11   2      3    4    5 6   6   7   8   8    9
+ 000  11l1 2222 333     4 555   666    7    888    9
 #+end_example
 
 1. Gegeben ist eine Zeile aus dem Scan mit Zahlen aus dem gezeigten Format. Wandele die Zahlen in eine Ganzzahl um.
