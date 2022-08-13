@@ -6,13 +6,7 @@ import java.util.Random;
 
 public enum CandyType {
 
-  CARAMELS(9),
-  CHOCOLATE(5),
-  GUMMIES(4),
-  LICORICE(3),
-  LOLLIPOPS(2),
-  CHEWING_GUMS(3),
-  COTTON_CANDY(1);
+  CARAMELS(9), CHOCOLATE(5), GUMMIES(4), LICORICE(3), LOLLIPOPS(2), CHEWING_GUMS(3), COTTON_CANDY(1);
 
   private final int addictiveQuality;
 
@@ -33,7 +27,9 @@ public enum CandyType {
     }
   }
 
-  public int getAddictiveQuality() { return addictiveQuality; }
+  public int getAddictiveQuality() {
+    return addictiveQuality;
+  }
 
   /**
    * Is there to get the minimum difference for the next() Method. If the step
@@ -43,10 +39,9 @@ public enum CandyType {
     int min = -MAXIMUM_ADDICTIVENESS;
     for (int i = 0; i < values().length; i++) {
       if (values()[i].getAddictiveQuality() > candytype.getAddictiveQuality()) {
-        min = (values()[i].addictiveQuality - candytype.addictiveQuality <
-               Math.abs(min))
-                  ? values()[i].addictiveQuality - candytype.addictiveQuality
-                  : min;
+        min = (values()[i].addictiveQuality - candytype.addictiveQuality < Math.abs(min))
+            ? values()[i].addictiveQuality - candytype.addictiveQuality
+            : min;
       }
     }
     if (min <= 0) {
@@ -60,12 +55,11 @@ public enum CandyType {
     int minDiff = getMinDifference(this);
     ArrayList<CandyType> solutions = new ArrayList<>();
     for (int i = 0; i < values().length; i++) {
-      if (values()[i].getAddictiveQuality() - this.getAddictiveQuality() ==
-          minDiff) {
+      if (values()[i].getAddictiveQuality() - this.getAddictiveQuality() == minDiff) {
         solutions.add(values()[i]);
       }
     }
-    return solutions.get((int)(RANDOM.nextInt(solutions.size())));
+    return solutions.get((int) (RANDOM.nextInt(solutions.size())));
     // Second Idea
     // for (int i = 1; i < values().length; i++) {
     // if (values()[i].getAddictiveQuality() > this.getAddictiveQuality()) {
@@ -91,7 +85,7 @@ public enum CandyType {
   }
 
   public static CandyType random() {
-    return values()[(int)(RANDOM.nextInt(values().length))];
+    return values()[(int) (RANDOM.nextInt(values().length))];
     // int random = (int) (Math.random() * 7);
     // switch (random) {
     // case 0:

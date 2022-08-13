@@ -10,48 +10,44 @@ public class Ascii {
   }
 
   public static void main(String[] args) {
-    int min = 32;
-    int rows = 16;
-    System.out.printf(
-        "%s%n", String.format("%-4s%-4s%-4s", "Dec", "Hex", "  ").repeat(6));
+    System.out.printf("%s%n", String.format("%-4s%-4s%-4s", "Dec", "Hex", "  ").repeat(6));
     for (int row = 0; row < 16; row++) {
       for (int asciiCode = 32 + row; asciiCode < 128; asciiCode += 16) {
         System.out.printf("%1$-4d%1$-4X%2$-4s", asciiCode,
-                          asciiCode == 127 ? "DEL"
-                                           : Character.toString(asciiCode));
+            asciiCode == 127 ? "DEL" : Character.toString(asciiCode));
       }
       System.out.printf("%n");
     }
     // for (int i = 0; i < rows; i++) {
-    //   // for (int j = 0; j < 18; j++) {
-    //   //   switch (j % 3) {
-    //   //   case 0:
-    //   //     System.out.printf("%-4d", i + min + j);
-    //   //   case 1:
-    //   //     System.out.printf("%-4X", i + min + j);
-    //   //   case 2:
-    //   //     System.out.printf("%-4c", i + min + j);
-    //   //   }
-    //   // }
-    //   // System.out.printf("%n");
+    // // for (int j = 0; j < 18; j++) {
+    // // switch (j % 3) {
+    // // case 0:
+    // // System.out.printf("%-4d", i + min + j);
+    // // case 1:
+    // // System.out.printf("%-4X", i + min + j);
+    // // case 2:
+    // // System.out.printf("%-4c", i + min + j);
+    // // }
+    // // }
+    // // System.out.printf("%n");
 
-    //   System.out.printf(
-    //       "%s%s%s%s%s%s%n",
-    //       String.format("%-4d%-4X%-4c", i + min, i + min, i + min),
-    //       String.format("%-4d%-4X%-4c", i + min + rows, i + min + rows,
-    //                     i + min + rows),
-    //       String.format("%-4d%-4X%-4c", i + min + rows * 2, i + min + rows *
-    //       2,
-    //                     i + min + rows * 2),
-    //       String.format("%-4d%-4X%-4c", i + min + rows * 3, i + min + rows *
-    //       3,
-    //                     i + min + rows * 3),
-    //       String.format("%-4d%-4X%-4c", i + min + rows * 4, i + min + rows *
-    //       4,
-    //                     i + min + rows * 4),
-    //       String.format("%-4d%-4X%-4c", i + min + rows * 5, i + min + rows *
-    //       5,
-    //                     i + min + rows * 5));
+    // System.out.printf(
+    // "%s%s%s%s%s%s%n",
+    // String.format("%-4d%-4X%-4c", i + min, i + min, i + min),
+    // String.format("%-4d%-4X%-4c", i + min + rows, i + min + rows,
+    // i + min + rows),
+    // String.format("%-4d%-4X%-4c", i + min + rows * 2, i + min + rows *
+    // 2,
+    // i + min + rows * 2),
+    // String.format("%-4d%-4X%-4c", i + min + rows * 3, i + min + rows *
+    // 3,
+    // i + min + rows * 3),
+    // String.format("%-4d%-4X%-4c", i + min + rows * 4, i + min + rows *
+    // 4,
+    // i + min + rows * 4),
+    // String.format("%-4d%-4X%-4c", i + min + rows * 5, i + min + rows *
+    // 5,
+    // i + min + rows * 5));
 
     // System.out.printf("%n");
 
