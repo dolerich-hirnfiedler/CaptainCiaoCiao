@@ -49,3 +49,5 @@ https://stackoverflow.com/questions/3911966/how-to-convert-number-to-words-in-ja
 
 - Tipp :: Die Typen ~Pattern~ und ~Matcher~ bieten weiter interessante Möglichkeiten.
 - Matcher :: ~appendReplacement()~ und ~appendTail()~.
+* Zeit mit AM und PM in 24-Stunden-Zählung umsetzen
+Schreibe einen Konverter, der Strings mit AM/PM (unabhängig von Groẞ-/Kleinschreibung, auch mit Punkten) in Military Time konvertiert. 12:00 AM ist 00:00 und 12:00 PM ist 12:00

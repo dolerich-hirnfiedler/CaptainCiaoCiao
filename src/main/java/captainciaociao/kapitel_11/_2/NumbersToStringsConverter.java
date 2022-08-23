@@ -1,7 +1,6 @@
 package captainciaociao.kapitel_11._2;
 
-import java.lang.reflect.Method;
-
+// TODO finish this exercise
 public class NumbersToStringsConverter {
     private static String[] oneDigits =
             {"Zero", "One", "Two", "Three", "Four", "Fife", "Six", "Seven", "Eight", "Nine"};
