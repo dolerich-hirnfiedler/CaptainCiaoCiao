@@ -2,7 +2,7 @@ package captainciaociao.kapitel_11._3;
 
 public class AdressUtils {
     public static Adress parseStringForAdress(String input) {
-        String[] parts = input.split("\\n|\\r|\\r\\n|\\n\\r");
+        String[] parts = input.split("\\R");
         if (parts.length == 3) {
             Adress adress = new Adress(parts[0], parts[1], parts[2]);
             return adress;

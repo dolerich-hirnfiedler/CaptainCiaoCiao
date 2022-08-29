@@ -32,3 +32,13 @@ Die Zeilen sind mit einem Zeilenumbruch getrennt, wobei es vier gültige Trennun
 ** Beispiele
 - "Boots and Bootles\n21 Pickle Street\n424242 Douglas \nArendelle"
 - "Doofenshmirtz Evil Inc. \nStrudelkuschel 4427\nDanville"
+* Sätze in Wörter zerlegen und umdrehen
+** Aufgabe
+- Zerlege den String in Wörter. Separatoren der sind Leerzeichen und Satzzeichen.
+- Drehe alle Wörter einzeln um.
+- Gib die Wörter hintereinander mit einem Leerzeichen getrennt aus. Die Satzzeichen und sonstige Separatoren spielen keine Rolle.
+** Beispiel
+#+begin_example
+"erehW did eht etarip esahcrup sih kooh? tA eht dnah-dnoces pohs!" -->
+"Where did the pirate purchase his hook At the hand second shop"
+#+end_example
