@@ -1,0 +1,34 @@
+#+title: Aufgaben
+* Adresszeilen mit dem StringTokenizer zerlegen
+Die Software von Captain CiaoCiao muss Adressen auswerten, die aus drei oder vier Zeilen bestehen.
+
+
+|-------+--------+----------|
+| Zeile | Inhalt | optional |
+|-------+--------+----------|
+|     1 | Name   | nein     |
+|     2 | Straße | nein     |
+|     3 | Ort    | nein     |
+|     4 | land   | ja       |
+|-------+--------+----------|
+
+Die Zeilen sind mit einem Zeilenumbruch getrennt, wobei es vier gültige Trennungszeichen gibt.:
+
+|---------+---------+-------------+----------------|
+| Zeichen | Dezimal | Hexadezimal | Escape-Sequenz |
+|---------+---------+-------------+----------------|
+| LF      | 10      | 0A          | \n             |
+| CR      | 13      | 0D          | \r             |
+| CR LF   | 13 10   | 0D 0A       | \r\n           |
+| LF CR   | 10 13   | 0A 0D       | \n\r           |
+|---------+---------+-------------+----------------|
+
+- Zerlege eine durch Zeilenumbrüche getrennte Zeichenfolge in vier Zeilen, und weise die Zeilen den Variablen ~name, street, city, country~ zu.
+- Falls eine vierte Zeile mit dem Landesnamen nicht gegeben ist, soll ~country~ gleich ~"Drusselstein"~ sein.
+- Setze die Zeile als CSV-Zeile durch Semikolons getrennt wieder zusammen.
+
+
+
+** Beispiele
+- "Boots and Bootles\n21 Pickle Street\n424242 Douglas \nArendelle"
+- "Doofenshmirtz Evil Inc. \nStrudelkuschel 4427\nDanville"
