@@ -19,7 +19,6 @@ public class Main {
             TimeUnit.MICROSECONDS.sleep(clip.getMicrosecondLength() + 50);
             clip.close();
         } catch (LineUnavailableException | IOException | UnsupportedAudioFileException | InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

@@ -7,8 +7,7 @@ import java.util.List;
 
 public class LongestLineInFile {
   public static void main(String[] args) {
-    String filename =
-        "/Users/dolerich_hirnfielder/CaptainCiaoCiao/src/main/java/captainciaociao/kapitel_08/_1_exception_fangen/family-names.txt";
+    String filename = "/Users/dolerich_hirnfielder/CaptainCiaoCiao/src/main/java/captainciaociao/kapitel_08/_1_exception_fangen/family-names.txt";
     try {
       List<String> lines = Files.readAllLines(Paths.get(filename));
       String longestName = "";
@@ -21,10 +20,9 @@ public class LongestLineInFile {
         }
       }
       System.out.printf("Longest Name: %s%n Second longest Name: %s%n",
-                        longestName, secondLongestName);
+          longestName, secondLongestName);
 
     } catch (IOException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
   }

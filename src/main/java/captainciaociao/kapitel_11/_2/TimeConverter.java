@@ -36,6 +36,7 @@ public class TimeConverter {
     // Second try:
     public static String convertToMilitary(String input) {
         StringBuilder workingString = new StringBuilder(input);
+
         return null;
     }
 }
