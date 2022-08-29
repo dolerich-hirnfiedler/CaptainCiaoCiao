@@ -2,7 +2,7 @@ package captainciaociao.kapitel_11._3;
 
 public class SwitchWords {
     public static String switchWords(String input) {
-        String[] words = input.split(" |,|.|;|\\!|\\?");
+        String[] words = input.split("\\W");
         for (int i = 0; i < words.length; i++) {
             words[i] = WordSwitcher.revertWord(words[i]);
         }
