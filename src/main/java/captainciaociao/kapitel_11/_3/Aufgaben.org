@@ -42,3 +42,11 @@ Die Zeilen sind mit einem Zeilenumbruch getrennt, wobei es vier gültige Trennun
 "erehW did eht etarip esahcrup sih kooh? tA eht dnah-dnoces pohs!" -->
 "Where did the pirate purchase his hook At the hand second shop"
 #+end_example
+* Relationen zwischen Zahlen prüfen
+** Aufgabe
+- Schreibe ein Programm, das einen wie in dem Beispiel aufgebauten String bekommt und ~true~ liefert, wenn alle Relationszeichen korrekt sind, und sonnst ~false~.
+** Beispiele
+- "1 < 2 > 1 < 10 = 10 > 2" --> true
+- "1 < 1" --> false
+- "1 <" --> false
+- "1" --> true
