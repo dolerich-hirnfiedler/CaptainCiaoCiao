@@ -50,3 +50,17 @@ Die Zeilen sind mit einem Zeilenumbruch getrennt, wobei es vier gültige Trennun
 - "1 < 1" --> false
 - "1 <" --> false
 - "1" --> true
+* A1-Notation in Spalten und Zeilen umwandeln
+Zellen in Tabellen können mit Zahlen genannt werden zb.: 4-16 bedeutet 4. Spalte, 16. Zeile. Es gibt eine weitere Methode Zellen zu benennen: Die A1-Notation. Dabei kodiert man die Spalten nach Buchstaben von A bis Z, nach folgendem Schema:
+A, B, ..., Z, AA, ..., AZ, BA, ..., ZZ, AAA, AAB, ...
+** Aufgabe
+Schreibe eine Methode ~parseA1Notation(String)~, die einen ~String~ in der A1-Notation bekommt und ein Array mit zwei Elementen zurückliefert, in dem an der Position 0 die Spalte und an der Position 1 die Zeile steht.
+** Beispiele
+- ~parseA1Notation("A1")~ --> [1, 1]
+- ~parseA1Notation("Z2")~ --> [26, 2]
+- ~parseA1Notation("AA34")~ --> [27, 34]
+- ~parseA1Notation("AA34")~ --> [27, 34]
+- ~parseA1Notation("BZ")~ --> [0, 0]
+- ~parseA1Notation("34")~ --> [0, 0]
+- ~parseA1Notation(" ")~ --> [0, 0]
+- ~parseA1Notation("")~ --> [0, 0]
