@@ -1,7 +1,6 @@
 package captainciaociao.kapitel_11._3;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class RelationChecker {
     private static boolean check(Integer first, Integer second, String relation) {

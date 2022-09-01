@@ -25,7 +25,7 @@ public class A1Notation {
     }
 
     public static int[] parseA1Notation(String input) {
-        int[] returnValue = {0, 0};
+        int[] returnValue = { 0, 0 };
         if (input.matches("[A-Z]+[0-9]+")) {
             String column = input.replaceAll("[A-Z]+", "").trim();
             String row = input.replaceAll("[0-9]+", "");
