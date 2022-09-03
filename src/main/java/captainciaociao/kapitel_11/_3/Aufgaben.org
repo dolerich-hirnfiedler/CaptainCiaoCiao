@@ -64,3 +64,32 @@ Schreibe eine Methode ~parseA1Notation(String)~, die einen ~String~ in der A1-No
 - ~parseA1Notation("34")~ --> [0, 0]
 - ~parseA1Notation(" ")~ --> [0, 0]
 - ~parseA1Notation("")~ --> [0, 0]
+* Einfache CSV-Dateien mit Koordinaten parsen
+#+begin_example
+20.091612,-155.676695
+23.087301,-74.643472
+21.305452,-71.690421
+#+end_example
+
+** Aufgaben
+- Lege von Hand eine CSV-Datei an. Sie soll mehrere Zeilen mit Koordinaten haben.
+- Ein Java Programm soll die CSV-Datei einlesen und in einer HTML-Datei mit SVG für den Polygonzug auf dem Bildschirm ausgeben.
+- Greife zum Parsen der Datei auf ~Scanner~ zurück. Achte darauf, den ~Scanner~ mit ~useLocale(Locale.ENGLISH)~ zu initialisieren.
+
+* Strings verlustfrei durch Lauflängenkodierung komprimieren
+Nehmen wir an, ein String bestände aus einer Folge von . und - Zeichen:
+#+begin_example
+--....--------..--
+#+end_example
+Um die Länge von Zeichenketten zu verkürzen, können wir zunächst das Symbol gefolgt von der Anzahl der Symbole schreiben. Die Folge mit 17 Zeichenketten könnte auf folgende Zeichenfolge mit 9 Zeichen verkürzt werden:
+#+begin_example
+-2.4-8-2-
+#+end_example
+
+** Aufgabe:
+- Lege eine neue Klasse ~SimpleStringCompressor~ an.
+- Schreibe eine statische Methode ~String compress(String)~, die Folgen von . und - nach dem beschriebenen Algorithmus kodiert.
+- Schreibe einen Dekodierer ~String decompress(String)~, der den komprimierten String wieder auspackt. Es soll ~decompress(compress(input))~ gleich input sein.
+** Erweiterung
+- Das Programm soll alle nicht-Ziffern verarbeiten können.
+- Verfeinere das Programm so, das die Zahl weg bleibt, wenn das Zeichen nur genau einmal vorkommt.
