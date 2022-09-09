@@ -71,10 +71,21 @@ Schreibe eine Methode ~parseA1Notation(String)~, die einen ~String~ in der A1-No
 21.305452,-71.690421
 #+end_example
 
+
+Die Beispiel Coordinaten machen keinen Sinn deswegen wird man auch kein Polygon sehen.
+
 ** Aufgaben
 - Lege von Hand eine CSV-Datei an. Sie soll mehrere Zeilen mit Koordinaten haben.
 - Ein Java Programm soll die CSV-Datei einlesen und in einer HTML-Datei mit SVG für den Polygonzug auf dem Bildschirm ausgeben.
 - Greife zum Parsen der Datei auf ~Scanner~ zurück. Achte darauf, den ~Scanner~ mit ~useLocale(Locale.ENGLISH)~ zu initialisieren.
+** Beispiel
+Für den oberen Block soll stehen
+
+#+begin_src html
+<svg height="210" width="500">
+<polygon points="20.091612,-155.676695 23.087301,-74.64347 21.305452,-71.69042" style="fill:lime;stroke;purple;stroke-width:1" />
+</svg>
+#+end_src
 
 * Strings verlustfrei durch Lauflängenkodierung komprimieren
 Nehmen wir an, ein String bestände aus einer Folge von . und - Zeichen:
