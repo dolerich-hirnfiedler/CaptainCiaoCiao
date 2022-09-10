@@ -11,8 +11,10 @@ import java.util.Scanner;
 
 public class CoordinateParser {
   public static void main(String[] args) {
-    File csvFile = new File("src/main/java/captainciaociao/kapitel_11/_3/Coordinates.csv");
-    File htmlWithSvg = new File("src/main/java/captainciaociao/kapitel_11/_3/Coordinates.html");
+    File csvFile =
+        new File("src/main/java/captainciaociao/kapitel_11/_3/Coordinates.csv");
+    File htmlWithSvg = new File(
+        "src/main/java/captainciaociao/kapitel_11/_3/Coordinates.html");
     try {
       FileWriter writer = new FileWriter(htmlWithSvg);
       // FileInputStream csvInputSream = new FileInputStream(csvFile);
@@ -22,12 +24,12 @@ public class CoordinateParser {
       csvScanner.useLocale(Locale.ENGLISH);
       htmlWithSvg.createNewFile();
       writer.write("""
-              <!DOCTYPE html>
-              <html>
-               <title>SVG Polygon</title>
-              </head>
-              <body>
-              """);
+          "<!DOCTYPE html>"
+          "<html>"
+           "<title>SVG Polygon</title>"
+          "</head>"
+          "<body>"
+          """);
       writer.write("<svg height=\"210\" width=\"500\">\n");
       String coordinates = "";
       while (csvScanner.hasNextLine()) {
@@ -38,10 +40,10 @@ public class CoordinateParser {
           coordinates);
       writer.write(coordinatesString);
       writer.write("""
-              "</svg>"
-              "</body>
-              "</html>"
-              """);
+          "</svg>"
+          "</body>"
+          "</html>"
+          """);
       writer.close();
       csvScanner.close();
       csvFileReader.close();
