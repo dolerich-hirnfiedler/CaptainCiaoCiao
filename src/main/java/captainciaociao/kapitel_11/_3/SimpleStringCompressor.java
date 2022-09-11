@@ -26,6 +26,9 @@ public class SimpleStringCompressor {
         }
       }
       output += input.substring(input.length() - 1, input.length());
+      if (counter > 2) {
+        output += counter;
+      }
     } else {
 
       return output;
@@ -74,20 +77,33 @@ public class SimpleStringCompressor {
 
   public static String decompress(String input) {
     String output = "";
-
-    Pattern numbers = Pattern.compile("[0-9]");
-    Matcher numberMatcher = numbers.matcher(input);
+    for (int i = 1; i < input.length(); i++) {
+      if (input.substring(i - 1, i).matches("[0-9]")) {
+        output +=
+            input.substring(i - 2, i - 1).repeat(Integer.parseInt(input.substring(i - 1, i)) - 1);
+      } else {
+        output += input.substring(i - 1, i);
+      }
+    }
+    if (input.substring(input.length() - 1).matches("\\d")) {
+      output += Character.toString(input.charAt(input.length() - 2))
+          .repeat(Integer.parseInt(input.substring(input.length() - 1, input.length())) - 1);
+    } else {
+      output += input.substring(input.length() - 1, input.length());
+    }
 
     return output;
   }
 
   public static void main(String[] args) {
     String test = "--....--------..--";
-    String secodTest = "sakjdfhassdsssswoehegkjaökssssssdfddffffffeeeeewpwwwwwj";
+    String secondTest = "abbcccddddeeeeffffwwww";
     String thirdTest = "9sakjdfhassdsssswoehegkjaökssssssdfddffffffeeeeewpwwwwwj";
     System.out.printf("%s%n", compress(test));
     System.out.printf("%s%n", advancedCompress(test));
-    System.out.printf("%s%n", advancedCompress(secodTest));
+    System.out.printf("%s%n", advancedCompress(secondTest));
     System.out.printf("%s%n", advancedCompress(thirdTest));
+    System.out.printf("%s%n", decompress(advancedCompress(secondTest)));
+    System.out.printf("%s%n", secondTest);
   }
 }
