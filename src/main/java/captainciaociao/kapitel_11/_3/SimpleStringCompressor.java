@@ -85,11 +85,12 @@ public class SimpleStringCompressor {
         output += input.substring(i - 1, i);
       }
     }
+    String lastCharAsString = input.substring(input.length() - 1, input.length());
     if (input.substring(input.length() - 1).matches("\\d")) {
       output += Character.toString(input.charAt(input.length() - 2))
-          .repeat(Integer.parseInt(input.substring(input.length() - 1, input.length())) - 1);
+          .repeat(Integer.parseInt(lastCharAsString) - 1);
     } else {
-      output += input.substring(input.length() - 1, input.length());
+      output += lastCharAsString;
     }
 
     return output;
