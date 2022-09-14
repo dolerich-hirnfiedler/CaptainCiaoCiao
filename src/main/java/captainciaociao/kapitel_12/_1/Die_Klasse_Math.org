@@ -1,0 +1,63 @@
+#+title: Die Klasse Math
+* Quiz: Was ergibt Pi mal Daumen?
+Zum Runden von numerischen Werten gibt es unterschiedliche  Ansätze und verschiedene Aufgabenstellungen:
+
+
++ Zum einen kann eine Fließkommazahl in eine Ganzzahl konvertiert werden.
++ Zum anderen kann bei einer Fließkommazahl die Anzahl der Nachkommastellen reduziert werden.
+
+
+Die Java-Bibliothek unterstützt unterschiedlichste Möglichkeiten zur Konvertierung und Rundung, unter anderem mit
+
++ der expliziten Typumwandlung ~(int) double~ → ~int~.
++ ~Math.floor(double)~ → ~double~.
++ ~Math.ceil(double)~ → ~double~.
++ ~Math.round(double)~ → ~long~.
++ ~Math.rint(double)~ → ~double~.
++ ~BigDecimal~ und ~setScale(…)~ → ~BigDecimal~.
++ ~NumberFormat~, konfiguriert mit ~setMaximumFractionDigits(…)~, dann ~format(…)~ → ~String~.
++ ~DecimalFormat~, konfiguriert mit ~setRoundingMode(…)~, dann ~format(…)~ → ~String~.
+** Aufgabe
+Fülle folgende Tabelle mit Werten aus:
+
+|---------------+---------+----------------+---------------+----------+---------------|
+| double-Wert d | (int) d | (int) floor(d) | (int) ceil(d) | round(d) | (int) rint(d) |
+|---------------+---------+----------------+---------------+----------+---------------|
+|          -2.5 |      -2 |             -3 |            -2 |       -2 |            -2 |
+|          -1.9 |      -1 |             -2 |            -1 |       -2 |            -2 |
+|          -1.6 |      -1 |             -2 |            -1 |       -2 |            -2 |
+|          -1.5 |      -1 |             -2 |            -1 |       -1 |            -2 |
+|          -1.1 |      -1 |             -2 |            -1 |       -1 |            -1 |
+|           1.1 |       1 |              1 |             2 |        1 |             1 |
+|           1.5 |       1 |              1 |             2 |        2 |             2 |
+|           1.6 |       1 |              1 |             2 |        2 |             2 |
+|           1.9 |       1 |              1 |             2 |        2 |             2 |
+|           2.5 |       2 |              2 |             3 |        3 |             2 |
+|---------------+---------+----------------+---------------+----------+---------------|
+* Prüfen, ob Tin Tin beim Runden betrogen hat
+ Gegeben sind ein Array mit Fließkommazahlen (positive und negative) und die von Tin Tin in eine Ganzzahl konvertierte Summe.
+** Aufgaben
++ Implemetiere eine Methode ~RoundingMode detectRoundingMode(double[] numbers, int sum)~, die eine ~double~-Array mit Zahlen und die Summe von Tin Tin bekommt und prüft, welcher Rundungsmodus verwendet wurde. Damit sich der Rundungsmodus repräsentieren lässt, führe einen Aufzählungstypen ein:
+
+#+begin_src java :noeval
+ enum RoundingMode
+{
+   CAST, ROUND, FLOOR, CEIL, RINT, UNKNOWN;
+}
+#+end_src
+
++ Die Aufzählungselemente repräsentieren unterschiedliche Rundungsarten:
+  - ~(int)~, also ein Umwandlungstyp
+  - ~(int) Math.floor(double)~
+  - ~(int) Math.ceil(double)~
+  - ~(int) Math.round(double)~
+  - ~(int) Math.rint(double)~
++ Welche Rundung ist für Captain CiaoCiao schlecht und Tin Tin gut? Mit welcher Variante könnte Tin Tin betrügen?
+
+
+** Beispiel
+Der Aufruf könnte so aussehen:
+#+begin_lang java
+double[] numbers={199.99}:
+System.out.println{detectRoundingMode(numbers,200)};
+#+end_lang

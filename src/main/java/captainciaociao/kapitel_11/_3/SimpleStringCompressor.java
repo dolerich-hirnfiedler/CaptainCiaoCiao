@@ -59,15 +59,15 @@ public class SimpleStringCompressor {
     for (int i = 0; i < dotsCleaned.size() + linesCleaned.size(); i++) {
       if (isDotFirst) {
         if (i % 2 == 0) {
-          output += String.format("%d.", dotsCleaned.get((int) i / 2).length());
+          output += String.format("%d.", dotsCleaned.get((int)i / 2).length());
         } else {
-          output += String.format("%d-", linesCleaned.get((int) i / 2).length());
+          output += String.format("%d-", linesCleaned.get((int)i / 2).length());
         }
       } else {
         if (i % 2 == 0) {
-          output += String.format("%d-", linesCleaned.get((int) i / 2).length());
+          output += String.format("%d-", linesCleaned.get((int)i / 2).length());
         } else {
-          output += String.format("%d.", dotsCleaned.get((int) i / 2).length());
+          output += String.format("%d.", dotsCleaned.get((int)i / 2).length());
         }
       }
     }
@@ -79,16 +79,17 @@ public class SimpleStringCompressor {
     String output = "";
     for (int i = 1; i < input.length(); i++) {
       if (input.substring(i - 1, i).matches("[0-9]")) {
-        output +=
-            input.substring(i - 2, i - 1).repeat(Integer.parseInt(input.substring(i - 1, i)) - 1);
+        output += input.substring(i - 2, i - 1)
+                      .repeat(Integer.parseInt(input.substring(i - 1, i)) - 1);
       } else {
         output += input.substring(i - 1, i);
       }
     }
-    String lastCharAsString = input.substring(input.length() - 1, input.length());
+    String lastCharAsString =
+        input.substring(input.length() - 1, input.length());
     if (input.substring(input.length() - 1).matches("\\d")) {
       output += Character.toString(input.charAt(input.length() - 2))
-          .repeat(Integer.parseInt(lastCharAsString) - 1);
+                    .repeat(Integer.parseInt(lastCharAsString) - 1);
     } else {
       output += lastCharAsString;
     }
@@ -99,7 +100,8 @@ public class SimpleStringCompressor {
   public static void main(String[] args) {
     String test = "--....--------..--";
     String secondTest = "abbcccddddeeeeffffwwww";
-    String thirdTest = "9sakjdfhassdsssswoehegkjaökssssssdfddffffffeeeeewpwwwwwj";
+    String thirdTest =
+        "9sakjdfhassdsssswoehegkjaökssssssdfddffffffeeeeewpwwwwwj";
     System.out.printf("%s%n", compress(test));
     System.out.printf("%s%n", advancedCompress(test));
     System.out.printf("%s%n", advancedCompress(secondTest));

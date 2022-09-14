@@ -1,0 +1,9 @@
+#+title: Information
+* Voraussetzungen
+- Rndungsmethoden der Klasse ~Math~ kennen.
+- ~BigInteger~ und ~Big Decimal~ kennen.
+* Java ist auch eine Insel, Kapitel 21
+* Verwendete Typen in diesem Kapitel
+- ~java.lang.Math~ https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Math.html
+- ~java.math.BigInteger~  https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/math/BigInteger.html
+- ~java.math.BigDecimal~  https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/math/BigDecimal.html
