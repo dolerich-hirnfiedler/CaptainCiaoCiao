@@ -1,0 +1,10 @@
+#+title: Sprachen und Länder
+* Landes-/Sprachtypische Formatierung für Zufallszahl anwenden
+Schreibe ein Programm, welches eine Betreffzeile ausgibt, welche z.b. so aussehen soll:
+#+begin_verse
+Buy */Bitcoin/* for just $11,937.70
+#+end_verse
+** Aufgabe
++ Erzeuge eine Zufallszahl vom Typ ~double~ zwischen 10.000 (inklusive) und 12.000 (exklusive); Nachkommastellen sind erwünscht.
++ Nutze die Methode ~String.format(String.format, Objekt... args)~, um eine Fließkommazahl mit zwei Nachkommastellen zu formatieren. Es soll ein Tausendertrennzeichen geben.
++ Erfrage alle ~Locale~-Objekte des Systems, und nutze sie als Argument für die ~String.format(Locale l,String format, Object... args)~-Methode, sodass die Fließkommazahl jeweils »lokal« formatiert wird. Gib den String aus.

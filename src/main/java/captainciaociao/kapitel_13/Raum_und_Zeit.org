@@ -1,0 +1,14 @@
+#+title: Raum und Zeit
+* Voraussetzungen
++ ~Locale~-Klasse kennen und Konstanten wie ~Locale.Germany~.
++ Notwendigkeit für landestypische Formatierung erkennen können.
++ temporale Datentypen ~LocaleDate~, ~localeDateTime~ und ~Duration~ kennen.
+
+Die benötigten Informationen werden in *Java ist auch eine Insel Kapitel 15* behandelt
+** Verwendete Datentypen in diesem Kapitel
++ ~java.util.Locale~ https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Locale.html
++ ~java.time.LocaleDate~ https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocaleDate.html
++ ~java.time.LocaleDateTime~ https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocaleDateTime.html
++ ~java.time.format.DateTimeFormatter~ https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/LocaleDateTime.html
++ ~java.time.format.FormatStyle~ https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html
++ ~java.time.Duration~ https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/Duration.html
