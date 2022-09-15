@@ -1,0 +1,20 @@
+#+title: Große und sehr präzise Zahlen
+* Arithmetischen Mittelwert einer großen Ganzzahl berechnen
+Berechne den arithmetischen Mittelwert zweier ~long~-Werte, sodass es nicht zu einem Überlauf und falschem Ergebnis kommt. Das Ergebnis soll wieder ein ~long~-Wert sein.
+* Zahl für Zahl über das Telefon
+Schreibe eine Methode ~BigInteger completeNumber(int.. parts)~, die eine Variable Anzahl von Zahlen bekommt und zum Schluss die Gesamtzahl zurück gibt.
+* Klasse für Brüche entwickeln und Brüche kürzen
+** Aufgabe
+1. Lege eine Klasse ~Fraction~ an.
+2. Es soll einen Konstruktor ~Fraction(int numerator, int denominator)~ geben, der Zähler und Nenner in ~public final~ Variablen ablegt.
+   - Überlege, ob es fehlerhafte Parameterbelegungen geben kann, die wir durch Ausnahmen melden sollten.
+   - Jeder angelegte Bruch soll automatisch gekürzt werden. Greife dazu auf die Methode ~gcd(…)~ von ~BigInteger~ zurück, die den ggT berechnet.
+   - Berechne das Vorzeichen der Brüche
+   - Die Objekte sollen alle immutable sein, und daher können die Variablen ~public~ sein.
+3. Ergänze den Konstruktor ~Fraction(int value)~, bei dem der Nenner automatisch 1 wird.
+4. Implementiere eine Methode, mit denen man Brüche multiplizieren kann und die Überläufe erkennt.
+5. Implemetiere eine Methode ~reciprocal()~, die den Kehrbruch eines Bruches liefert. Mithilfe dieser Methode lässt sich Division realisieren.
+6. ~Fraction~ soll ~java.lang.Number~ erweitern und alle vorgeschriebenen Methoden implementieren.
+7. ~Fraction~ soll ~Comparable~ implementieren.
+8. ~Fraction~ soll ~equals(…)~ und ~hasCkode()~ korrekt implementieren.
+9. Implementiere eine ~toString()~-Methode, die eine möglichst schlanke Rückgabe liefert.
