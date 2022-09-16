@@ -3,7 +3,7 @@ package captainciaociao.kapitel_12._1;
 
 public class Rounder {
 
-    private static RoundingMode detectRoundingMOde(int rounded, double number) {
+    private static RoundingMode detectRoundingMode(int rounded, double number) {
         return rounded == (int) number ? RoundingMode.CAST
                 : rounded == (int) Math.floor(number) ? RoundingMode.FLOOR
                         : rounded == (int) Math.ceil(number) ? RoundingMode.CEIL
@@ -17,7 +17,7 @@ public class Rounder {
         for (int i = 0; i < numbers.length; i++) {
             realSum += numbers[i];
         }
-        return detectRoundingMOde(sum, realSum);
+        return detectRoundingMode(sum, realSum);
     }
 
     public static void main(String[] args) {
