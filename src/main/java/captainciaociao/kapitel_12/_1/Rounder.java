@@ -1,9 +1,7 @@
 package captainciaociao.kapitel_12._1;
 
-import java.util.Random;
 
 public class Rounder {
-    private static final Random RANDOM = new Random();
 
     private static RoundingMode detectRoundingMOde(int rounded, double number) {
         return rounded == (int) number ? RoundingMode.CAST
