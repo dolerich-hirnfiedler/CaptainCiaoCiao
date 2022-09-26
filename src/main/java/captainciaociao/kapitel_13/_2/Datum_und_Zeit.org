@@ -18,4 +18,12 @@ Captain CiaoCiao feiert jedes Jahr den Geburtstag von Sir Francis Beaufort, der 
 #+begin_src java :results output noeval
 LocalDate beaufortBday = LocalDate.of(1774, Month.MAY,27);
 #+end_src
-+ Entwickle ausgehend von ~beaufortBday~ ein neues ~LocaleDate~-Objekt, mit dem aktuellen Jahr, wobei das jetzige Jahr nicht hart ein-kodiert ist, sondern dynamisch von dem System stammen soll
++ Entwickle ausgehend von ~beaufortBday~ ein neues ~LocaleDate~-Objekt, mit dem aktuellen Jahr, wobei das jetzige Jahr nicht hart ein-kodiert ist, sondern dynamisch von dem System stammen soll.
++ Erzeuge eine Ausgabe, an welchem Wochentag in diesem Jahr Francis Geburtstag feiert. In welcher Form der Wochentag ausgegeben wird, also Zahl oder String oder welcher Sprache, ist egal.
+** Beispiel
+Für das Jahr 2020 könnte die Ausgabe wie folgt aussehen:
+#+begin_example
+WEDNESDAY
+3
+Mittwoch
+#+end_example
