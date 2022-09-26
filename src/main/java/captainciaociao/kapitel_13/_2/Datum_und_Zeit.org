@@ -1,5 +1,5 @@
 #+title: Datum und Zeit
-* Datumsausgabe in verschiedene Sprachen formatieren
+* DONE Datumsausgabe in verschiedene Sprachen formatieren
 ** Aufgabe
 + Erzeuge ein ~LocalDate~-Objekt für den 19. September:
 #+name: Date
@@ -10,7 +10,7 @@ LocalDate now=LocalDate.of(Year.now().getValue(),Month.SEPTEMBER,19);
 + Rufe ~format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM))~ auf dem ~LocalDate~ auf.
 + Es gibt insgesamt vier ~FormatStyle~-Stile probiere alle aus. Welches Muster wird verwendet?
 + Auf dem ~DateTimeFormatter~-Objekt kann man ~withLocale(Locale)~ aufrufen und die Sprache ändern. Probiere das für verschiedene Sprachen aus.
-* An welchem Tag feiert Sir Francis Beaufort dieses Jahr Geburtstag?
+* DONE An welchem Tag feiert Sir Francis Beaufort dieses Jahr Geburtstag?
 Captain CiaoCiao feiert jedes Jahr den Geburtstag von Sir Francis Beaufort, der am 27.Mai 1774 geboren wurde.
 ** Aufgabe
 + Gegeben ist ein ~LocalDate~ mit Fraancis' Geburtstag:
@@ -27,3 +27,34 @@ WEDNESDAY
 3
 Mittwoch
 #+end_example
+* TODO Durchschnittliche Dauer der Karaoke-Nächte ermitteln.
+Schreibe relevante Daten auf ein Notizblock auf die Einträge können wie folgt aussehen:
+»2022-03-12,20:20-2022-03-12,23:50«
+** Aufgabe
++ schreibe ein Programm, das einen String im oberen Format auswertet und die durchschnittliche Party-Dauer ermittelt und ausgibt.
++ Bei dem Programm müssen keine Zeitzonen, Schaltsekunden oder sonstige Sonderfälle berücksichtigt werden - ein Tag kann exakt 24 Stunden lang sein.
+** Beispiel
+Für den String:
+=2022-03-12, 20:20 - 2022-03-12, 23:50=
+=2022-04-01, 21:30 - 2022-04-02, 01:20=
+soll die Ausgabe so aussehen:
+=3 h 40 m=
+** Tipp
+Bei Zeitdifferenz hilft die Klasse ~Duration~.
+* TODO Verschiedene Datumsformate parsen
+Ein Datum kann absolut oder relativ spezifiziert werden, und es gibt mehrere Möglichkeiten zur Datumsausgabe. Ein paar Bespiele:
+#+begin_example
+2020-10-10
+2020-12-2
+1/3/1976
+1/3/2020
+tomorrow
+today
+yesterday
+1 day ago
+2234 days ago
+#+end_example
+** Aufgabe
++ Schreibe eine Methode ~Optional<LocalDate> parseDate(String string)~, welche die oben genannten Formate erkennt
++ Wenn der string in einem der Formate vorliegt, soll die Methode  den String parsen, in ein ~LocalDate~ konvertieren und im ~Optional~ zurückgeben.
++ Konnte kein Format geparst werden, ist die Rückgabe ~Optional.empty()~.
