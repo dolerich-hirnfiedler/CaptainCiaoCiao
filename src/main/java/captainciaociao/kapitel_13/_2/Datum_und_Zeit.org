@@ -6,3 +6,16 @@
 #+begin_src java :results output :noeval
 LocalDate now=LocalDate.of(Year.now().getValue(),Month.SEPTEMBER,19);
 #+end_src
++ Rufe die ~toString()~-Methode auf. Wie ist die Ausgabe?
++ Rufe ~format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM))~ auf dem ~LocalDate~ auf.
++ Es gibt insgesamt vier ~FormatStyle~-Stile probiere alle aus. Welches Muster wird verwendet?
++ Auf dem ~DateTimeFormatter~-Objekt kann man ~withLocale(Locale)~ aufrufen und die Sprache ändern. Probiere das für verschiedene Sprachen aus.
+* An welchem Tag feiert Sir Francis Beaufort dieses Jahr Geburtstag?
+Captain CiaoCiao feiert jedes Jahr den Geburtstag von Sir Francis Beaufort, der am 27.Mai 1774 geboren wurde.
+** Aufgabe
++ Gegeben ist ein ~LocalDate~ mit Fraancis' Geburtstag:
+#+name: Birthday
+#+begin_src java :results output noeval
+LocalDate beaufortBday = LocalDate.of(1774, Month.MAY,27);
+#+end_src
++ Entwickle ausgehend von ~beaufortBday~ ein neues ~LocaleDate~-Objekt, mit dem aktuellen Jahr, wobei das jetzige Jahr nicht hart ein-kodiert ist, sondern dynamisch von dem System stammen soll
