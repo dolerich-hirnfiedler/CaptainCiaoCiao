@@ -37,7 +37,7 @@ Fülle folgende Tabelle mit Werten aus:
 * Prüfen, ob Tin Tin beim Runden betrogen hat
  Gegeben sind ein Array mit Fließkommazahlen (positive und negative) und die von Tin Tin in eine Ganzzahl konvertierte Summe.
 ** Aufgaben
-+ Implemetiere eine Methode ~RoundingMode detectRoundingMode(double[] numbers, int sum)~, die eine ~double~-Array mit Zahlen und die Summe von Tin Tin bekommt und prüft, welcher Rundungsmodus verwendet wurde. Damit sich der Rundungsmodus repräsentieren lässt, führe einen Aufzählungstypen ein:
++ Implementiere eine Methode ~RoundingMode detectRoundingMode(double[] numbers, int sum)~, die eine ~double~-Array mit Zahlen und die Summe von Tin Tin bekommt und prüft, welcher Rundungsmodus verwendet wurde. Damit sich der Rundungsmodus repräsentieren lässt, führe einen Aufzählungstypen ein:
 
 #+begin_src java :noeval
  enum RoundingMode

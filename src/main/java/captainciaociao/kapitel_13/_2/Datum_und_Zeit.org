@@ -1,0 +1,8 @@
+#+title: Datum und Zeit
+* Datumsausgabe in verschiedene Sprachen formatieren
+** Aufgabe
++ Erzeuge ein ~LocalDate~-Objekt für den 19. September:
+#+name: Date
+#+begin_src java :results output :noeval
+LocalDate now=LocalDate.of(Year.now().getValue(),Month.SEPTEMBER,19);
+#+end_src
