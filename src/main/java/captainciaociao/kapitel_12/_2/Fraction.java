@@ -16,20 +16,20 @@ public class Fraction extends Number implements Comparable<Fraction> {
         BigInteger gcd = numeratorBigInt.gcd(denominatorBigInt);
         int[] returnValue = new int[2];
 
-        while (gcd != BigInteger.ONE) {
+        while (!gcd.equals(BigInteger.ONE)) {
             numeratorBigInt = numeratorBigInt.divide(gcd);
             denominatorBigInt = denominatorBigInt.divide(gcd);
             gcd = numeratorBigInt.gcd(denominatorBigInt);
         }
-        returnValue[0] = Integer.valueOf(numeratorBigInt.toString());
-        returnValue[1] = Integer.valueOf(denominatorBigInt.toString());
+        returnValue[0] = Integer.parseInt(numeratorBigInt.toString());
+        returnValue[1] = Integer.parseInt(denominatorBigInt.toString());
         return returnValue;
 
     }
 
 
     private static Fraction reciprocal(Fraction fraction) {
-        return new Fraction(fraction.denominator, fraction.numerator);
+        return new Fraction(fraction.numerator, fraction.denominator);
     }
 
     private static int[] computeSign(int numerator, int denominator) {
@@ -129,7 +129,7 @@ public class Fraction extends Number implements Comparable<Fraction> {
             return "0";
         if (this.denominator == 1)
             return "" + this.denominator;
-        return String.format("%d/%d", denominator, numerator);
+        return String.format("%d/%d",  numerator,denominator);
     }
 
 
