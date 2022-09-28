@@ -27,7 +27,7 @@ WEDNESDAY
 3
 Mittwoch
 #+end_example
-* TODO Durchschnittliche Dauer der Karaoke-Nächte ermitteln.
+* DONE Durchschnittliche Dauer der Karaoke-Nächte ermitteln.
 Schreibe relevante Daten auf ein Notizblock auf die Einträge können wie folgt aussehen:
 »2022-03-12,20:20-2022-03-12,23:50«
 ** Aufgabe
