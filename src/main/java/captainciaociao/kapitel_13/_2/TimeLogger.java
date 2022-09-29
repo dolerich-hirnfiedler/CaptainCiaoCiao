@@ -16,7 +16,6 @@ public class TimeLogger {
         duration = Duration.between(startTime, endTime);
 
         return duration;
-
     }
 
     public static Duration parseAverage(String... args) {
@@ -30,7 +29,6 @@ public class TimeLogger {
         }
         average = average.dividedBy(dates.size());
         return average;
-
     }
 
     public static void main(String[] args) {
