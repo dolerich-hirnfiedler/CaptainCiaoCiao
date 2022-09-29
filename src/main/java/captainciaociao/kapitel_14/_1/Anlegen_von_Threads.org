@@ -1,0 +1,22 @@
+#+title: Anlegen_von_Threads
+* TODO Threads erzeugen für Winken und Fähnchen-schwenken
+zu ehren von Captain CiaoCiao gibt es eine Parade. Er steht an der Rampe seines Schiffes, winkt mit der einen Hand und schwenkt ein Fähnchen mit der anderen.
+** Aufgabe
++ Threads führen in Java immer Dinge vom Typ ~Runnable~ aus. ~Runnable~ ist eine funktionale Schnittstele. Es gibt zwei Möglichkeiten diese zu implementieren: Klassen und Lambda-Ausdrücke. Schreibe zwei Implementierungen von ~Runnable~; einmal durch eine Klasse, einmal mit einem Lambda-Ausdruck.
++ Setze in beide ~Runnable~-Implementierungen eine Schleife mit fünfzig Wiederholungen. Das eine ~Runnable~ soll auf dem Bildschirm »winken« ausgeben, das andere »Fähnchen schwenken«
++ Erzeuge ein ~Thread~-Objekt, und übergebe das ~Runnable~-Objekt. Starte dann die Threads. Starte nicht fünfzig Threads, sondern nur zwei!
+** Erweiterung
++ Die ~run()~-Methode jedes Threads soll die Zeile ~System.out.println(Thread.currentThread());~ enthalten, Was wird dann angezeigt?
++ Lässt sich abschätzen wie viel ein Thread "kostet"?
+* TODO Threads beenden
+Threads lassen sich hart mit ~stop()~ beenden -  Die Methode ist seit Jahrzehnten deprecated, aber wird wohl nie gelöscht -  oder nett mit ~interrupt()~ bitten, sich selbst zu beenden.
+** Aufgabe
++ Modifiziere die Threads aus [[*Threads erzeugen für Winken und Fähnchen-schwenken][Threads erzeugen für Winken und Fähnchen-schwenken]] so, dass sie prinzipiell unendlich lange Fähnchen schwenken, es sei denn, es gibt eine Unterbrechung. Die ~run()~-Methode soll daher über ~Threads.currentThread().isInterrupted()~ testen, ob es eine Unterbrechung gab, und dann die Schleife verlassen.
++ Baue in die Schleife eine Verzögerung ein. Kopiere dafür den folgenden Code:
+
+   #+begin_src java :results output :noeval
+   try {Thread.sleep(2000);}catch(InterruptedException e){
+   Thread.currentThread().interrupt();}
+   #+end_src
++ Das Hauptprogramm soll mit ~JOption.showInputDialog(String)~ auf eine Eingabe reagieren, sodass die Kommandos ~endw~ das Winken und ~endf~ das Fähnchen-schwenken beenden.
+* TODO Runnable parametrisieren

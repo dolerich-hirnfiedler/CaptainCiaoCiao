@@ -1,0 +1,15 @@
+#+title: Nebenläufige_Programmierung_mit_Threads
+* TODO Voraussetzungen
++ [ ] ~main~-Thread nutzen können
++ [ ] eigene Threads erzeugen können, Unterschiede zwischen ~Thread~ und ~Runnable~ kennen.
++ [ ] Threads schlafen legen können.
++ [ ] Threads unterbrechen können.
++ [ ] Aufgaben im Thread-Pool zur Bearbeitung abgeben können.
++ [ ] nebenläufige Operationen mit Rückgabe einsetzen können.
++ [ ] Unterschiede zwischen ~Runnable~ und ~Callable~ verstehen.
++ [ ] Threads mit ~Lock~-Objekten synchronisieren können.
++ [ ] Threads untereinander mit ~Condition~-Objekten benachrichtigen können.
++ [ ] Synchronisationshelfer wie ~Semaphore~ kennen.
+* TODO Informationen
++ [ ] Java ist auch eine Insel, Kapitel 16
++ [ ] Java SE Standard-Bibliothek, Kapitel 5.
