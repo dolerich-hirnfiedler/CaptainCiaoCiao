@@ -3,8 +3,48 @@ package captainciaociao.kapitel_13._2;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Optional;
+import java.util.Scanner;
+import java.util.function.Function;
 
 public class DateParser {
+    public static Optional<LocalDate> parseDate(String string) {
+        LocalDate now = LocalDate.now();
+
+        Collection<Function<String, LocalDate>> parsers = Arrays.asList(
+                input -> LocalDate.parse(input, DateTimeFormatter.ofPattern("yyyy-M-d")),
+                input -> LocalDate.parse(input, DateTimeFormatter.ofPattern("d/M/yyyy")),
+                input -> LocalDate.parse(input, DateTimeFormatter.ofPattern("d/M/yy")),
+                input -> input.equalsIgnoreCase("yesterday") ? now.minusDays(1) : null,
+                input -> input.equalsIgnoreCase("today") ? now : null,
+                input -> input.equalsIgnoreCase("tomorrow") ? now.plusDays(1) : null,
+                input -> new Scanner(input).findAll("(\\d+) days? ago")
+                        .map(matchResult -> matchResult.group(1)).mapToInt(Integer::parseInt)
+                        .mapToObj(now::minusDays).findFirst().orElse(null));
+
+
+        for (Function<String, LocalDate> parser : parsers) {
+            try {
+                return Optional.of(parser.apply(string));
+            } catch (Throwable e) {
+                System.out.println("Error " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+
+        return Optional.empty();
+
+        // DateTimeFormatter formatter = new DateTimeFormatterBuilder().appendPattern("[d/M/yyy]")
+        // .appendPattern("[yyyy-MM-dd]")
+        // .parseDefaulting(ChronoField.MONTH_OF_YEAR, YearMonth.now().getMonthValue())
+        // .parseDefaulting(ChronoField.DAY_OF_MONTH, LocalDate.now().getDayOfMonth())
+        // .toFormatter();
+    }
+
     public static void main(String[] args) {
         File data = new File("dates.txt");
         if (!data.exists()) {
