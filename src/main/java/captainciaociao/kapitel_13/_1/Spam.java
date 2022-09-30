@@ -16,7 +16,5 @@ public class Spam {
             System.out.printf("%6s: %s%n", locale.toString(),
                     String.format(locale, "Buy Bitcoins for just $%f", random));
         }
-
-
     }
 }

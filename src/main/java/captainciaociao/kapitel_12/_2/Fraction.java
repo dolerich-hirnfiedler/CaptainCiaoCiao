@@ -95,8 +95,6 @@ public class Fraction extends Number implements Comparable<Fraction> {
         this.denominator = 1;
     }
 
-
-
     @Override
     public int intValue() {
         return (int) this.numerator / this.denominator;
@@ -129,7 +127,7 @@ public class Fraction extends Number implements Comparable<Fraction> {
             return "0";
         if (this.denominator == 1)
             return "" + this.denominator;
-        return String.format("%d/%d",  numerator,denominator);
+        return String.format("%d/%d", numerator, denominator);
     }
 
 
