@@ -56,5 +56,5 @@ yesterday
 #+end_example
 ** Aufgabe
 + Schreibe eine Methode ~Optional<LocalDate> parseDate(String string)~, welche die oben genannten Formate erkennt
-+ Wenn der string in einem der Formate vorliegt, soll die Methode  den String parsen, in ein ~LocalDate~ konvertieren und im ~Optional~ zurückgeben.
++ Wenn der String in einem der Formate vorliegt, soll die Methode  den String parsen, in ein ~LocalDate~ konvertieren und im ~Optional~ zurückgeben.
 + Konnte kein Format geparst werden, ist die Rückgabe ~Optional.empty()~.
