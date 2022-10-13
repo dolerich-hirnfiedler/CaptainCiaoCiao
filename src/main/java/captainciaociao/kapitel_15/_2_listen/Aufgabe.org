@@ -1,0 +1,3 @@
+#+title: Aufgabe
+* Listen ablaufen und Eigenschaften prüfen
+* Kommentare aus Listen filtern
