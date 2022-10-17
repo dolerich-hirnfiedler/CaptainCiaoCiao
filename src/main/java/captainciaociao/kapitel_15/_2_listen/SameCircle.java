@@ -14,13 +14,18 @@ public class SameCircle {
 
         int offset = 0;
 
-        for (int i = 0; i < secondList.size(); i++) {
+        for (int i = 0; i < secondList.size() - 1; i++) {
             if (firstList.get(0).matches(secondList.get(i))) {
                 offset = i;
                 break;
             }
         }
 
+        for (int i = 0; i < secondList.size() - 1; i++) {
+            if (!firstList.get(i).matches(secondList.get((i + offset) % (secondList.size())))) {
+                return false;
+            }
+        }
         return true;
     }
 
@@ -29,5 +34,8 @@ public class SameCircle {
         List<String> namesTwo = new ArrayList<>(Arrays.asList("Anne", "Henry", "Alexandre", "Charles"));
         List<String> namesThree = new ArrayList<>(Arrays.asList("Alexandre", "Charles", "Henry", "Anne"));
         List<String> namesFour = new ArrayList<>(Arrays.asList("Alexandre", "William", "Anne", "Henry"));
+
+        System.out.println(isSameCircle(namesOne, namesTwo));
+        System.out.println(isSameCircle(namesThree, namesFour));
     }
 }
