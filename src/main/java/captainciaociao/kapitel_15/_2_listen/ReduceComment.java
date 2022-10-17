@@ -45,5 +45,6 @@ public class ReduceComment {
         for (String string : log) {
             System.out.printf("%s%n", string);
         }
+
     }
 }
