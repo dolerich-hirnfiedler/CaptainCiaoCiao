@@ -1,7 +1,10 @@
 package captainciaociao.kapitel_15._4_assoziativspeicher;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
+import java.util.Optional;
+import java.util.Scanner;
+import java.util.StringJoiner;
 
 public class Morse {
     // A .-
@@ -41,8 +44,8 @@ public class Morse {
     // 8 ---..
     // 9 ----.
 
-    private Map<Character, String> charToMorse = new TreeMap<>();
-    private Map<String, Character> morseToChar = new TreeMap<>();
+    private Map<Character, String> charToMorse = new HashMap<>();
+    private Map<String, Character> morseToChar = new HashMap<>();
 
     public Morse() {
         charToMorse.put('A', ".-");
@@ -83,6 +86,34 @@ public class Morse {
         charToMorse.put('9', "----.");
         charToMorse.forEach((character, string) -> morseToChar.put(string, character));
 
+    }
+
+    public String encode(String string) {
+        StringJoiner result = new StringJoiner(" ");
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            if (c == ' ') {
+                result.add("");
+            } else {
+                String maybeMorse = charToMorse.get(Character.toUpperCase(c));
+                if (maybeMorse != null) {
+                    result.add(maybeMorse);
+                }
+            }
+        }
+        return result.toString();
+    }
+
+    public String decode(String string) {
+        StringBuilder result = new StringBuilder(string.length() / 4);
+        for (String word : string.split(" {2}")) {
+            for (Scanner scanner = new Scanner(word); scanner.hasNext();) {
+                Optional.of(scanner.next()).map(morseToChar::get).ifPresent(result::append);
+                scanner.close();
+                result.append(' ');
+            }
+        }
+        return result.toString();
     }
 
 }
