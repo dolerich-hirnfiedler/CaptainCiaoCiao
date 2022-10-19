@@ -36,7 +36,6 @@ public class ReadNameAdministerLength {
             sortedbyLength.forEach((len, names) -> System.out.println(len + ": " + names));
 
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
