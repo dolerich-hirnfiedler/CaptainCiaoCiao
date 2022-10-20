@@ -14,12 +14,12 @@ import java.util.TreeMap;
 
 public class ReadNameAdministerLength {
     // 15.4.5 Name einlesen und Längen verwalten
-
+    
     private final static String namesURL = "https://tutego.de/download/family-names.txt";
-
+    
     private final static String filePath = "./family-names.txt";
-
-
+    
+    
     public static void main(String[] args) {
         try {
             SortedMap<Integer, List<String>> sortedbyLength = new TreeMap<>();
@@ -31,10 +31,9 @@ public class ReadNameAdministerLength {
             for (String name : allNames) {
                 sortedbyLength.computeIfAbsent(name.length(), __ -> new ArrayList<>()).add(name);
             }
-
-
+            
             sortedbyLength.forEach((len, names) -> System.out.println(len + ": " + names));
-
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
